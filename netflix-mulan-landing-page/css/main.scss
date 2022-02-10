@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Inter', sans-serif;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+body {
+  background-color: black;
+  margin: 2rem 4rem 0rem 4rem;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  .header {
+    @include flex;
+    justify-content: space-between;
+
+    .logo {
+      img {
+        width: 8rem;
+      }
+    }
+    .nav ul {
+      @include flex;
+      li {
+        padding: 0.8rem;
+      }
+      a {
+        color: white;
+        font-size: 1rem;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 1.3rem;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: white;
+          height: 0.1rem;
+          transition: all 0.2s ease-in-out;
+          width: 0%;
+        }
+
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .search {
+      position: relative;
+      box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.3);
+      border-radius: 0.2rem;
+
+      input {
+        background-color: transparent;
+        padding: 0.5rem 0.5rem 0.5rem 2rem;
+        outline: 0;
+        border: 0;
+        color: white;
+        backdrop-filter: blur(10px);
+        transition: all 0.2s ease-in-out;
+
+        &:focus {
+          box-shadow: 0 0 1px 2px white;
+          border-radius: 0.2rem;
+        }
+
+        &::placeholder {
+          color: white;
+          opacity: 0.8;
+        }
+      }
+
+      i {
+        position: absolute;
+        left: 0.5rem;
+        top: 0.5rem;
+        color: white;
+      }
+    }
+  }
+
+  .main {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 6rem 0;
+    width: 30%;
+
+    .movie-title img {
+      width: 14rem;
+    }
+
+    .details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.7rem;
+
+      .line {
+        background-color: #666;
+        height: 1rem;
+        width: 0.1rem;
+      }
+
+      h4 {
+        color: #ccc;
+        font-size: 0.9rem;
+        font-weight: 400;
+
+        &.classification {
+          background-color: red;
+          padding: 0.2rem;
+          border-radius: 0.1rem;
+          color: white;
+        }
+      }
+    }
+
+    .content {
+      margin: 0.5rem 0;
+      p {
+        color: white;
+        font-size: 0.9rem;
+        font-weight: 400;
+      }
+    }
+
+    .buttons {
+      position: relative;
+      margin: 0.5rem 0;
+
+      button {
+        margin-right: 0.7rem;
+        padding: 0.6rem 1rem 0.6rem 2rem;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        cursor: pointer;
+
+        &.play {
+          background-color: red;
+          border: 0;
+          outline: 0;
+          color: white;
+        }
+
+        &.mylist {
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          outline: 0;
+          color: white;
+          background-color: black;
+        }
+      }
+      i.fa-play {
+        position: absolute;
+        color: white;
+        left: 0.8rem;
+        top: 0.8rem;
+      }
+
+      i.fa-plus {
+        position: absolute;
+        color: white;
+        left: 7.5rem;
+        top: 0.8rem;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    .trailer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.8rem;
+
+      img {
+        width: 3.4rem;
+        cursor: pointer;
+      }
+
+      p {
+        color: white;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+    }
+
+    .contact {
+      p {
+        color: white;
+
+        a {
+          color: red;
+          transition: all 0.4s ease-in-out;
+
+          &:hover {
+            color: violet;
+          }
+        }
+      }
+    }
+  }
+}
