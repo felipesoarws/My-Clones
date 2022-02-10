@@ -1,0 +1,582 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background-color: black;
+}
+
+body .sec {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body .sec::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+}
+
+body .sec .content {
+  position: absolute;
+  bottom: 5rem;
+  left: 1.3rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  body .sec .content {
+    margin: 2rem;
+  }
+  body .sec .content p {
+    font-size: 1.8rem;
+  }
+  body .sec .content h1 {
+    font-size: 4rem;
+  }
+}
+
+body .sec .content span {
+  display: block;
+}
+
+body .sec .content h1 {
+  margin-bottom: 1.6rem;
+  line-height: 1;
+}
+
+body .sec .content a {
+  padding: 1rem 2.5rem;
+  border: 2px solid white;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+body .sec-1 {
+  background: url(../images/1_mobile.webp);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  body .sec-1 {
+    background: url(../images/1_desktop.webp);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+body .sec-1 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.9rem 1.3rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: 10;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+@media screen and (min-width: 1024px) {
+  body .sec-1 header {
+    padding: 1.8rem 3rem;
+    z-index: 1;
+  }
+}
+
+body .sec-1 header.downing {
+  opacity: 0;
+}
+
+body .sec-1 header.uping {
+  background-color: black;
+}
+
+body .sec-1 header .nav ul {
+  display: none;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  body .sec-1 header .nav ul {
+    gap: 1.3rem;
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: -1;
+  }
+}
+
+body .sec-1 header .nav ul a {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+body .sec-1 header .logo {
+  z-index: 10;
+}
+
+body .sec-1 header .logo img {
+  width: 9rem;
+}
+
+@media screen and (min-width: 1024px) {
+  body .sec-1 header .logo img {
+    width: 13rem;
+  }
+}
+
+body .sec-1 header .menu-icon {
+  z-index: 10;
+  height: 1rem;
+  -webkit-transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease-in-out;
+}
+
+@media screen and (min-width: 1024px) {
+  body .sec-1 header .menu-icon {
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1.5rem;
+  }
+  body .sec-1 header .menu-icon span {
+    -webkit-transform: translateY(-0.15rem);
+            transform: translateY(-0.15rem);
+    z-index: 15;
+  }
+}
+
+body .sec-1 header .menu-icon nav {
+  display: none;
+  visibility: hidden;
+}
+
+body .sec-1 header .menu-icon nav a {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+  body .sec-1 header .menu-icon nav {
+    display: block;
+    visibility: visible;
+  }
+}
+
+body .sec-1 header .menu-icon span {
+  margin-top: 0.4rem;
+  display: block;
+  width: 1rem;
+  height: 0.15rem;
+  background-color: white;
+  position: relative;
+  z-index: 15;
+  -webkit-transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease-in-out;
+}
+
+body .sec-1 header .menu-icon span::after, body .sec-1 header .menu-icon span::before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  left: 0;
+  -webkit-transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease-in-out;
+}
+
+body .sec-1 header .menu-icon span::after {
+  top: 0.25rem;
+}
+
+body .sec-1 header .menu-icon span::before {
+  bottom: 0.25rem;
+}
+
+body .sec-1 header .menu-icon span.rotate {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease-in-out;
+}
+
+body .sec-1 header .menu-icon span.rotate::after {
+  -webkit-transform: rotate(90deg) translate(-0.28rem, 0.05rem);
+          transform: rotate(90deg) translate(-0.28rem, 0.05rem);
+}
+
+body .sec-1 header .menu-icon span.rotate::before {
+  display: none;
+}
+
+body .sec-1 .menu-mob {
+  height: 100vh;
+  background-color: black;
+  width: 0;
+  -webkit-transition: all 1s cubic-bezier(0.28, 1.15, 1, 1);
+  transition: all 1s cubic-bezier(0.28, 1.15, 1, 1);
+  text-align: right;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+}
+
+@media screen and (min-width: 1024px) {
+  body .sec-1 .menu-mob {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+body .sec-1 .menu-mob ul {
+  padding: 2.8rem 1.3rem;
+}
+
+body .sec-1 .menu-mob ul li {
+  text-transform: uppercase;
+  margin: 0.7rem 0;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: none;
+}
+
+body .sec-1 .menu-mob ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+body .sec-1 .menu-mob.show {
+  width: 85vw;
+  -webkit-animation: matrix 1s ease-in-out;
+          animation: matrix 1s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  body .sec-1 .menu-mob.show {
+    width: 45vw;
+  }
+}
+
+body .sec-1 .menu-mob.show li {
+  display: block;
+}
+
+@-webkit-keyframes matrix {
+  from {
+    -webkit-transform: matrix(1.6, 0, 0.1, 1, 2, 0);
+            transform: matrix(1.6, 0, 0.1, 1, 2, 0);
+  }
+  to {
+    -webkit-transform: matrix(0, 0, 0, 0, 0);
+            transform: matrix(0, 0, 0, 0, 0);
+  }
+}
+
+@keyframes matrix {
+  from {
+    -webkit-transform: matrix(1.6, 0, 0.1, 1, 2, 0);
+            transform: matrix(1.6, 0, 0.1, 1, 2, 0);
+  }
+  to {
+    -webkit-transform: matrix(0, 0, 0, 0, 0);
+            transform: matrix(0, 0, 0, 0, 0);
+  }
+}
+
+body .sec-1 .menu-desktop {
+  position: relative;
+  height: 100vh;
+  background-color: black;
+  width: 0;
+  -webkit-transition: all 1s cubic-bezier(0.28, 1.15, 1, 1);
+  transition: all 1s cubic-bezier(0.28, 1.15, 1, 1);
+  text-align: right;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  body .sec-1 .menu-desktop {
+    display: block;
+    visibility: visible;
+    z-index: 2;
+  }
+  body .sec-1 .menu-desktop span {
+    margin-top: 0.4rem;
+    display: block;
+    width: 1rem;
+    height: 0.15rem;
+    background-color: white;
+    position: absolute;
+    z-index: 15;
+    -webkit-transition: all 0.3 ease-in-out;
+    transition: all 0.3 ease-in-out;
+    right: 3rem;
+    top: 2.7rem;
+    display: none;
+    visibility: hidden;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    transition: all 0.3 ease-in-out;
+  }
+  body .sec-1 .menu-desktop span.visible {
+    display: block;
+    visibility: visible;
+  }
+  body .sec-1 .menu-desktop span::after, body .sec-1 .menu-desktop span::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    left: 0;
+    -webkit-transition: all 0.3 ease-in-out;
+    transition: all 0.3 ease-in-out;
+  }
+  body .sec-1 .menu-desktop span::after {
+    top: 0.25rem;
+    -webkit-transform: rotate(90deg) translate(-0.28rem, 0.05rem);
+            transform: rotate(90deg) translate(-0.28rem, 0.05rem);
+  }
+  body .sec-1 .menu-desktop span::before {
+    bottom: 0.25rem;
+    display: none;
+  }
+}
+
+body .sec-1 .menu-desktop ul {
+  padding: 4.8rem 2.8rem;
+}
+
+body .sec-1 .menu-desktop ul li {
+  text-transform: uppercase;
+  margin: 0.7rem 0;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: none;
+}
+
+body .sec-1 .menu-desktop ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+body .sec-1 .menu-desktop.show {
+  width: 85vw;
+  -webkit-animation: matrix 1s ease-in-out;
+          animation: matrix 1s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  body .sec-1 .menu-desktop.show {
+    width: 35vw;
+  }
+}
+
+body .sec-1 .menu-desktop.show li {
+  display: block;
+}
+
+@keyframes matrix {
+  from {
+    -webkit-transform: matrix(1.6, 0, 0.1, 1, 2, 0);
+            transform: matrix(1.6, 0, 0.1, 1, 2, 0);
+  }
+  to {
+    -webkit-transform: matrix(0, 0, 0, 0, 0);
+            transform: matrix(0, 0, 0, 0, 0);
+  }
+}
+
+body .sec-2 {
+  background: url(../images/2_mobile.webp);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  body .sec-2 {
+    background: url(../images/2_desktop.webp);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+body .sec-3 {
+  background: url(../images/3_mobile.webp);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  body .sec-3 {
+    background: url(../images/3_desktop.webp);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+body .sec-4 {
+  background: url(../images/4_mobile.webp);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  body .sec-4 {
+    background: url(../images/4_desktop.webp);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+body .sec-5 {
+  background: url(../images/5_mobile.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-width: 768px) {
+  body .sec-5 {
+    background: url(../images/5_desktop.webp);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+body footer {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  body footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1.7rem;
+  }
+}
+
+body footer .copyright p {
+  color: #ccc;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+body footer .copyright p a {
+  color: red;
+  text-decoration: none;
+  text-transform: lowercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body footer .copyright p a:hover {
+  color: white;
+}
+
+body footer .sm ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  body footer .sm ul {
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body footer .sm ul {
+    gap: 2rem;
+    margin-bottom: 0.3rem;
+  }
+}
+
+body footer .sm ul a {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */
